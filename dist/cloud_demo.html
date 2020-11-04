@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Functions and Variables Example</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h4>Events</h4>
+        <!-- Sync example -->
+        <p> Number of people in the rooms: {{ countPeople }}</p>
+        
+        <hr>
+        <h4>Variables</h4>
+        <!-- Read variables example -->
+        <p>Counting People (0): {{ countPeople_0 }} </p>
+        <button v-on:click="getCountPeople(0)">Get nr of People in Room 0 (Device 0)</button>
+        <br>
+        <p>Counting People (1): {{ countPeople_1 }} </p>
+        <button v-on:click="getCountPeople(1)">Get nr of People in Room 0  (Device 1)</button>
+        
+        <hr>
+        <h4>Functions</h4>
+        <!-- Call functions example  -->
+        <p>Mannually adding and removeing People</p>
+        <button v-on:click="addPerson (0)">Add Person (Device 0)</button>
+        <button v-on:click="removePerson(0)">Remove Person (Device 0)</button>
+        <br>
+        <br>
+        <button v-on:click="addPerson(1)">Add Person (Device 1)</button>
+        <button v-on:click="removePerson(1)">Remove Person (Device 1)</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="cloud_demo.js"></script>
+</body>
+
+</html>
